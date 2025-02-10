@@ -156,6 +156,32 @@
         <item>Delivery</item>
     </string-array>
     <string name="jo">Jam Oprasional</string>
+    <string-array name="menu_profil">
+        <item>Semua Pesanan</item>
+        <item>Alamat Pengiriman</item>
+        <item>Atur Metode Pembayaran</item>
+        <item>Bantuan</item>
+        <item>Merchandise</item>
+        <item>Curhat</item>
+        <item>Pengaturan Bahasa</item>
+        <item>Ketentuan Layanan</item>
+        <item>Kebijakan Privasi</item>
+        <item>Order Jumlah Besar</item>
+        <item>Tentang Kopi Kenangan</item>
+    </string-array>
+    <integer-array name="icon_profil">
+        <item>@drawable/list</item>
+        <item>@drawable/bahasa</item>
+        <item>@drawable/bayar</item>
+        <item>@drawable/bantu</item>
+        <item>@drawable/tas</item>
+        <item>@drawable/chat</item>
+        <item>@drawable/bahasa</item>
+        <item>@drawable/info</item>
+        <item>@drawable/buku</item>
+        <item>@drawable/pesan</item>
+        <item>@drawable/brand2</item>
+    </integer-array>
 
 
 </resources>
