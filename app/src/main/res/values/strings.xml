@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">Kopi Kenangan</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_order">Pesan</string>
+    <string name="title_scan">Scan QR</string>
+    <string name="title_vip">VIP</string>
+    <string name="title_profile">Saya</string>
+    <string name="special">Special Hari Ini</string>
+    <string name="diskon">Diskon &amp; Cashback</string>
+    <string name="kuota">Kuota Terbatas</string>
+    <string name="baru">Baru!</string>
+    <string name="makanan">Makanan</string>
+    <string name="voucher">Voucher Package</string>
+    <string name="curhat">Curhat ke 6895 2714 6455(Chat Only)</string>
+    <string name="text">
+"Informasi Kontak Layanan Pengaduan Konsumen Direkrorat Jenderal"
+"Perlindungan Konsumen dan Tertib Niaga, Kementrian Perdagangan"
+"Republik Indonesia."
+    </string>
+    <string name="ditjen">Whatsapp Ditjen PKTN: 0853–1111–1010</string>
+    <string name="outlet">Daftar Outlet</string>
+    <string name="search">Cari lokasi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string-array name="data_name">
+        <item>3 Hanya 40RB</item>
+        <item>Beli 2 gratis 1</item>
+        <item>Diskon 50%</item>
+        <item>Promo Romantis</item>
+        <item>Kenangan Hanya Untukmu</item>
+        <item>My Honey</item>
+    </string-array>
+    <string-array name="data_harga_coret">
+        <item><![CDATA[<s>60000</s>]]></item>
+        <item><![CDATA[<s>50000</s>]]></item>
+        <item><![CDATA[<s>40000</s>]]></item>
+        <item><![CDATA[<s>30000</s>]]></item>
+        <item><![CDATA[<s>20000</s>]]></item>
+        <item><![CDATA[<s>65000</s>]]></item>
+    </string-array>
+    <string-array name="data_harga">
+        <item>Rp 40000</item>
+        <item>Rp 45000</item>
+        <item>Rp 20000</item>
+        <item>Rp 25000</item>
+        <item>Rp 15000</item>
+        <item>Rp 60000</item>
+    </string-array>
+    <integer-array name="data_photo">
+        <item>@drawable/promo1</item>
+        <item>@drawable/promo2</item>
+        <item>@drawable/promo3</item>
+        <item>@drawable/promo4</item>
+        <item>@drawable/promo5</item>
+        <item>@drawable/promo6</item>
+    </integer-array>
+    <string-array name="deskrip_voucher">
+        <item>Gratis Ongkir</item>
+        <item>blu by BCA</item>
+        <item>20% by BSI</item>
+    </string-array>
+    <string-array name="nominal">
+        <item>15000</item>
+        <item>30 %</item>
+        <item>20 %</item>
+    </string-array>
+    <string-array name="klaim">
+        <item>Klaim</item>
+        <item>Klaim</item>
+        <item>Klaim</item>
+    </string-array>
+    <string-array name="nama_produk">
+        <item>Freezy Nobo Honey Mango</item>
+        <item>Creamy Aren Latte</item>
+        <item>Frozen Nobo Honey Mango</item>
+        <item>Caramel Macchiato</item>
+        <item>Butterscotch Soft Serve</item>
+        <item>Avocado Coffe</item>
+    </string-array>
+    <string-array name="harga_produk">
+        <item>Rp 28000</item>
+        <item>Rp 24000</item>
+        <item>Rp 12000</item>
+        <item>Rp 30000</item>
+        <item>Rp 24000</item>
+        <item>Rp 12000</item>
+    </string-array>
+    <integer-array name="photo_produk">
+        <item>@drawable/produk1</item>
+        <item>@drawable/produk2</item>
+        <item>@drawable/produk3</item>
+        <item>@drawable/produk4</item>
+        <item>@drawable/produk5</item>
+        <item>@drawable/produk6</item>
+    </integer-array>
+    <string-array name="nama_makanan">
+        <item>Roti Srikaya</item>
+        <item>Chocolate Croissant</item>
+        <item>Butter Croissant</item>
+        <item>Chocolate Cromboloni</item>
+        <item>Strawberry Cromboloni</item>
+    </string-array>
+    <string-array name="harga_makanan">
+        <item>Rp 17.000</item>
+        <item>Rp 19.000</item>
+        <item>Rp 15.000</item>
+        <item>Rp 26.000</item>
+        <item>Rp 26.000</item>
+    </string-array>
+    <integer-array name="foto_makanan">
+        <item>@drawable/food1</item>
+        <item>@drawable/food2</item>
+        <item>@drawable/food3</item>
+        <item>@drawable/food4</item>
+        <item>@drawable/food5</item>
+    </integer-array>
+    <integer-array name="order_brand">
+        <item>@drawable/brand2</item>
+        <item>@drawable/brand3</item>
+        <item>@drawable/brand5</item>
+    </integer-array>
+    <integer-array name="simbol_order">
+        <item>@drawable/circle1</item>
+        <item>@drawable/circle2</item>
+        <item>@drawable/circle3</item>
+    </integer-array>
+    <string-array name="nama_mall">
+        <item>Lippo Mall Puri</item>
+        <item>Kyai Maja</item>
+        <item>Menara Standard Chartered</item>
+        <item>Setiabudi One</item>
+        <item>Kota Kasablanka</item>
+        <item>Tempo Scan Towewr</item>
+        <item>Menara Karya</item>
+        <item>Mangkuluhur City</item>
+        <item>Central Grand Indonesia 2nd Floor</item>
+        <item>Skyline Building</item>
+    </string-array>
+    <string-array name="alamat_mall">
+        <item>Jl. Puri Indah Raya Blok U 1, RT.3/RW.2, Kembangan Sel., Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610</item>
+        <item>Jl. Kyai Maja No.29 Blok M, RT.10/RW.7, Kramat Pela, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12130</item>
+        <item> Standart Chartered, GF, Jl. Prof. DR. Satrio No.164, RT.3/RW.4, Karet Semanggi, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12930</item>
+        <item>Setiabudi One, Unit B 211, Jl. H. R. Rasuna Said No.Kav. 62 18, RT.18/RW.2, Kuningan, Karet Kuningan, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12920</item>
+        <item>Kota Kasablanka, Kota Kasablanka (The Common Unit GF-FSG 07, Jl. Raya Casablanca No.88, RT.2/RW.14, Menteng Dalam, Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12870</item>
+        <item>No.Kav3, Tempo Scan Tower Basement Level, Jl. H. R. Rasuna Said No.4, RT.5/RW.4, Kuningan Tim., Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950</item>
+        <item> Jl. H. R. Rasuna Said, RT.1/RW.2, Kuningan, Kuningan Tim., Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950</item>
+        <item>Hana Lounge, Mangkuluhur City D, Jl. Gatot Subroto No.Kav. 1–3, RT.1/RW.4, Karet Semanggi, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12930</item>
+        <item>Central Grand Indonesia, Jl. Tlk. Betung I 2nd Floor, Kb. Melati, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10230</item>
+        <item>Skyline Building, Jl. M.H. Thamrin No.9 2, RT.2/RW.1, Kb. Sirih, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10230</item>
+    </string-array>
+    <string-array name="ket_order">
+        <item>Pickup</item>
+        <item>Dine In</item>
+        <item>Delivery</item>
+    </string-array>
+    <string name="jo">Jam Oprasional</string>
+
+
+</resources>
