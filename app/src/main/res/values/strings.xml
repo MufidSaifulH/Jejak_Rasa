@@ -11,7 +11,7 @@
     <string name="baru">Baru!</string>
     <string name="makanan">Makanan</string>
     <string name="voucher">Voucher Package</string>
-    <string name="curhat">Curhat ke 6895 2714 6455(Chat Only)</string>
+    <string name="curhat">Curhat ke 089527146455(Chat Only)</string>
     <string name="text">
 "Informasi Kontak Layanan Pengaduan Konsumen Direkrorat Jenderal"
 "Perlindungan Konsumen dan Tertib Niaga, Kementrian Perdagangan"
@@ -21,9 +21,10 @@
     <string name="outlet">Daftar Outlet</string>
     <string name="search">Cari lokasi</string>
 
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+
     <string-array name="data_name">
         <item>3 Hanya 40RB</item>
         <item>Beli 2 gratis 1</item>

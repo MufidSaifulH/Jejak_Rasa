@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileFragment"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <View
         android:layout_width="match_parent"
@@ -22,13 +27,14 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kenangan Points"
-                android:textColor="@color/gold"/>
+                android:textColor="@color/coklat"/>
 
             <ImageView
                 android:layout_width="10dp"
@@ -47,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Masuk"
-                android:textColor="@color/gold"/>
+                android:textColor="@color/coklat"/>
 
             <ImageView
                 android:layout_width="10dp"
@@ -69,7 +75,14 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/koin"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -77,7 +90,8 @@
                 android:text="0"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:layout_marginStart="5dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -140,13 +154,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginStart="220dp">
+            android:layout_marginStart="220dp"
+            android:layout_gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Detail"
-                android:textColor="@color/black"
+                android:textColor="@color/biru"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -165,6 +180,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:text="25"
+            android:textColor="@color/coklat"
             android:background="@drawable/point"
             android:gravity="center"
             android:layout_marginRight="3dp"/>
@@ -174,6 +190,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:text="25"
+            android:textColor="@color/coklat"
             android:background="@drawable/point"
             android:gravity="center"
             android:layout_marginLeft="3dp"
@@ -184,6 +201,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:text="2.500"
+            android:textColor="@color/coklat"
             android:background="@drawable/point"
             android:gravity="center"
             android:layout_marginLeft="3dp"/>
@@ -201,7 +219,8 @@
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:text="25"
+            android:text="Hari ke-1"
+            android:textColor="@color/coklat"
             android:gravity="center"
             android:layout_marginRight="3dp"/>
 
@@ -209,7 +228,8 @@
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:text="25"
+            android:text="Hari ke-2"
+            android:textColor="@color/coklat"
             android:gravity="center"
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"/>
@@ -218,7 +238,8 @@
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:text="2.500"
+            android:text="Hari ke-3"
+            android:textColor="@color/coklat"
             android:gravity="center"
             android:layout_marginLeft="3dp"/>
     </LinearLayout>
@@ -242,7 +263,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:nestedScrollingEnabled="false">
     </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

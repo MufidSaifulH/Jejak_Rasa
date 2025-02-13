@@ -1,11 +1,13 @@
 package com.example.kopikenangan.Adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kopikenangan.DetailFoodAndDrink
 import com.example.kopikenangan.R
 import com.example.kopikenangan.dataclass.Food
 
@@ -28,6 +30,14 @@ class AdapterFood (private val listFood : ArrayList<Food>) : RecyclerView.Adapte
         holder.tvDescription.text = listFood[position].nama
         holder.tvHarga.text = listFood[position].harga
 
+        holder.itemView.setOnClickListener {
+            val intentDetail = Intent(holder.itemView.context, DetailFoodAndDrink::class.java)
+            intentDetail.putExtra("EXTRA_PHOTO", listFood[holder.bindingAdapterPosition].photo)
+            intentDetail.putExtra("EXTRA_NAME", listFood[holder.bindingAdapterPosition].nama)
+            intentDetail.putExtra("EXTRA_HARGA_B", listFood[holder.bindingAdapterPosition].harga)
+
+            holder.itemView.context.startActivity(intentDetail)
+        }
     }
 }
 

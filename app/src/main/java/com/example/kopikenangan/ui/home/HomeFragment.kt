@@ -1,5 +1,7 @@
 package com.example.kopikenangan.ui.home
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -7,6 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,11 +20,14 @@ import com.example.kopikenangan.Adapter.ListPromoAdapter
 import com.example.kopikenangan.Adapter.VoucherAdapter
 import com.example.kopikenangan.R
 import com.example.kopikenangan.Adapter.SliderAdapter
+import com.example.kopikenangan.DetailActivity
+import com.example.kopikenangan.OrderFragment
 import com.example.kopikenangan.databinding.FragmentHomeBinding
 import com.example.kopikenangan.dataclass.Food
 import com.example.kopikenangan.dataclass.Produk
 import com.example.kopikenangan.dataclass.Promo
 import com.example.kopikenangan.dataclass.Voucher
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 import java.lang.Runnable
 
 class HomeFragment : Fragment() {
@@ -51,6 +58,8 @@ class HomeFragment : Fragment() {
         viewPager = binding.viewPager
         bannerSlider = binding.banner
 
+//        dotsIndicator = binding.dotsIndicator
+
         //slider
         val imageList = listOf(
             R.drawable.kenangan1,
@@ -66,6 +75,7 @@ class HomeFragment : Fragment() {
         )
         //slider 1
         viewPager.adapter = SliderAdapter(imageList)
+//        dotsIndicator.attachTo(viewPager)
         viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         viewPager.setPageTransformer { page, position ->
             page.alpha = 0.5f + (1 - Math.abs(position)) * 0.5f
@@ -123,17 +133,27 @@ class HomeFragment : Fragment() {
         rvMakanan.setHasFixedSize(true)
         listMakanan.addAll(getListMakanan())
         showRecyclerMakanan()
-
-
-//        val hargaCoretArray = resources.getStringArray(R.array.data_harga_coret)
-//        val hargaArray = resources.getStringArray(R.array.data_harga)
-//        val deskripsiArray = resources.getStringArray(R.array.data_name)
-
-//        binding.txthargaCoretText.text = hargaCoretArray[0]
-//        binding.txthargaText.text = hargaArray[0]
-//        binding.txtdeskripsiText.text = deskripsiArray[0]
-
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.moreSpecial.setOnClickListener {
+            val orderFragment = OrderFragment()
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, orderFragment) // Ganti dengan ID container Fragment
+            transaction.addToBackStack(null) // Agar bisa kembali ke Fragment sebelumnya
+            transaction.commit()
+        }
+        binding.btnCurhat.setOnClickListener{
+            val wa = "689527146455"
+            try {
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$wa")
+                startActivity(intent)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
     }
 
     private fun getListPromo(): ArrayList<Promo> {

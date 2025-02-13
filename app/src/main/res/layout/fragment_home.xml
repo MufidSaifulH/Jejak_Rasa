@@ -11,14 +11,23 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:orientation="vertical">
+        
+<!--        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator-->
+<!--            android:id="@+id/dotsIndicator"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            app:dotsColor="@color/grey"-->
+<!--            app:selectedDotColor="@color/black"-->
+<!--            app:dotsSize="10dp"/>-->
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
-
+            android:layout_height="200dp"
+            android:scaleType="centerCrop">
         </androidx.viewpager2.widget.ViewPager2>
 
         <LinearLayout
@@ -26,9 +35,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/special"
@@ -41,22 +51,22 @@
                 android:padding="10dp"/>
 
             <ImageView
-                android:layout_width="15sp"
-                android:layout_height="15sp"
+                android:id="@+id/moreSpecial"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:src="@drawable/rigth_arrow"
-                android:layout_centerInParent="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignRight="@id/special"
-                android:padding="10dp"/>
+                android:layout_gravity="center"
+                android:layout_marginStart="230dp"/>
 
-        </RelativeLayout>
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_promo"
             android:layout_width="409dp"
             android:layout_height="180dp"
             tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="201dp" />
+            tools:layout_editor_absoluteY="201dp"
+            android:nestedScrollingEnabled="false"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -143,7 +153,8 @@
             android:layout_height="700dp"
             android:padding="10dp"
             android:clipToPadding="false"
-            android:scrollbars="none"/>
+            android:scrollbars="none"
+            android:nestedScrollingEnabled="false"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -172,7 +183,8 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:clipToPadding="false"
-            android:scrollbars="none"/>
+            android:scrollbars="none"
+            android:nestedScrollingEnabled="false"/>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/banner"
@@ -199,6 +211,7 @@
                 android:padding="10dp"/>
 
             <LinearLayout
+                android:id="@+id/btn_curhat"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:orientation="horizontal"
