@@ -1,5 +1,6 @@
 package com.example.kopikenangan
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -18,6 +19,11 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         //recycle1
         val photo = intent.getIntExtra("EXTRA_PHOTO", 0)
         val name = intent.getStringExtra("EXTRA_NAME")
@@ -31,5 +37,7 @@ class DetailActivity : AppCompatActivity() {
         binding.tvDetailHargaCoret.text = HtmlCompat.fromHtml(hargaCoret ?: "", HtmlCompat.FROM_HTML_MODE_LEGACY)
         binding.tvDetailHargaBaru.text = hargaBaru
         binding.tvKeranjang.text = hargaBaru
+
+
     }
 }

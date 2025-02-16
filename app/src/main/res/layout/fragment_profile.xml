@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ProfileFragment"
     android:orientation="vertical">
 
@@ -21,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
 
 
         <LinearLayout
@@ -33,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kenangan Points"
+                android:text="@string/kenangan"
                 android:textColor="@color/coklat"/>
 
             <ImageView
@@ -43,38 +44,42 @@
                 android:layout_marginStart="5dp"
                 android:layout_gravity="center"/>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginLeft="240dp">
+            android:gravity="end">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Masuk"
-                android:textColor="@color/coklat"/>
+                android:text="@string/masuk"
+                android:textColor="@color/coklat" />
 
             <ImageView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
-                android:src="@drawable/rigth_arrow"
+                android:layout_gravity="center"
                 android:layout_marginStart="5dp"
-                android:layout_gravity="center"/>
+                android:src="@drawable/rigth_arrow" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp">
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal"
             android:layout_gravity="center">
 
@@ -87,34 +92,40 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@string/nol"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:layout_marginStart="5dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="pts"
+                android:text="@string/pts"
                 android:textColor="@color/grey"
-                android:textSize="10dp"
-                android:layout_marginLeft="5dp"/>
+                android:textSize="10sp"
+                android:layout_marginStart="5dp"
+                tools:ignore="SmallSp" />
 
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginStart="270dp">
+            android:layout_gravity="center"
+            android:gravity="end">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="153dp"
                 android:layout_height="wrap_content"
-                android:text="Hey, There Mufid"
+                android:gravity="end"
+                android:text="@string/user"
+                android:textSize="15sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -123,8 +134,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="40dp">
 
 
@@ -136,31 +146,35 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Daily Chek-In"
+                android:text="@string/chek_in"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Berakhir 28 Feb 2025"
+                android:text="@string/tanggal"
                 android:textColor="@color/grey"
-                android:textSize="10dp" />
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
 
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginStart="220dp"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:layout_marginEnd="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Detail"
+                android:text="@string/detail"
+                android:textSize="15sp"
                 android:textColor="@color/biru"
                 android:textStyle="bold"/>
 
@@ -175,36 +189,74 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="15dp">
 
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:text="25"
-            android:textColor="@color/coklat"
-            android:background="@drawable/point"
-            android:gravity="center"
-            android:layout_marginRight="3dp"/>
 
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="50dp"
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:text="25"
-            android:textColor="@color/coklat"
+            android:orientation="vertical"
             android:background="@drawable/point"
             android:gravity="center"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"/>
+            android:layout_marginEnd="5dp">
 
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="50dp"
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/koin"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/txt_koin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/point_1"
+                android:textColor="@color/coklat" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:text="2.500"
-            android:textColor="@color/coklat"
+            android:orientation="vertical"
             android:background="@drawable/point"
             android:gravity="center"
-            android:layout_marginLeft="3dp"/>
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/koin"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/point_2"
+                android:textColor="@color/coklat" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/point"
+            android:gravity="center"
+            android:layout_marginStart="5dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/koin"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/point_3"
+                android:textColor="@color/coklat" />
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -219,16 +271,16 @@
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:text="Hari ke-1"
+            android:text="@string/hari_ke_1"
             android:textColor="@color/coklat"
             android:gravity="center"
-            android:layout_marginRight="3dp"/>
+            android:layout_marginEnd="3dp"/>
 
         <TextView
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:text="Hari ke-2"
+            android:text="@string/hari_ke_2"
             android:textColor="@color/coklat"
             android:gravity="center"
             android:layout_marginLeft="3dp"
@@ -238,16 +290,17 @@
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:text="Hari ke-3"
+            android:text="@string/hari_ke_3"
             android:textColor="@color/coklat"
             android:gravity="center"
-            android:layout_marginLeft="3dp"/>
+            android:layout_marginStart="3dp"/>
     </LinearLayout>
 
     <TextView
+        android:id="@+id/btn_chek_in"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:text="Chek-In Hari Ini"
+        android:text="@string/chek_in_today"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="16sp"
@@ -261,11 +314,19 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMenu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="640dp"
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:nestedScrollingEnabled="false">
     </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veri Aplikasi 124.12.31"
+            android:textColor="@color/abu"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
     </LinearLayout>
 
 </ScrollView>

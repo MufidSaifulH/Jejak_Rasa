@@ -1,5 +1,6 @@
 package com.example.kopikenangan
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,11 @@ class DetailFoodAndDrink : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailFoodAndDrinkBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         val foto = intent.getIntExtra("EXTRA_PHOTO", 0)
         val nama = intent.getStringExtra("EXTRA_NAME")

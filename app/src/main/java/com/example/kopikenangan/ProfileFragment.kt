@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kopikenangan.Adapter.AdapterMenu
@@ -30,6 +31,11 @@ class ProfileFragment : Fragment() {
         listMenu.addAll(getListMenu())
         showRecyclerList()
 
+        binding.btnChekIn.setOnClickListener {
+            Toast.makeText(requireContext(), "Berhasil ${binding.txtKoin.text}", Toast.LENGTH_SHORT).show()
+        }
+
+
         return view
     }
     private fun showRecyclerList() {
@@ -43,10 +49,8 @@ class ProfileFragment : Fragment() {
 
         val listMenu = ArrayList<Menu>()
         for (i in dataName.indices) {
-            val menu = Menu(
-                dataPhoto.getResourceId(i, -1),
-                dataName[i]
-            )
+            val menu = Menu(dataPhoto.getResourceId(i, -1),
+                dataName[i])
             listMenu.add(menu)
         }
         return listMenu

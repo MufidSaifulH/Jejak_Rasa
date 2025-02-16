@@ -58,8 +58,6 @@ class HomeFragment : Fragment() {
         viewPager = binding.viewPager
         bannerSlider = binding.banner
 
-//        dotsIndicator = binding.dotsIndicator
-
         //slider
         val imageList = listOf(
             R.drawable.kenangan1,
@@ -140,8 +138,8 @@ class HomeFragment : Fragment() {
         binding.moreSpecial.setOnClickListener {
             val orderFragment = OrderFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container, orderFragment) // Ganti dengan ID container Fragment
-            transaction.addToBackStack(null) // Agar bisa kembali ke Fragment sebelumnya
+            transaction.replace(R.id.fragment_container, orderFragment)
+            transaction.addToBackStack(null)
             transaction.commit()
         }
         binding.btnCurhat.setOnClickListener{

@@ -157,6 +157,21 @@
         <item>Delivery</item>
     </string-array>
     <string name="jo">Jam Oprasional</string>
+    <string name="kenangan">Kenangan Points</string>
+    <string name="masuk">Masuk</string>
+    <string name="nol">0</string>
+    <string name="pts">pts</string>
+    <string name="user">Hey, There Mufid</string>
+    <string name="chek_in">Daily Chek-In</string>
+    <string name="tanggal">Berakhir 28 Feb 2025</string>
+    <string name="detail">Detail</string>
+    <string name="point_1">25</string>
+    <string name="point_2">25</string>
+    <string name="point_3">2.500</string>
+    <string name="hari_ke_1">Hari ke-1</string>
+    <string name="hari_ke_2">Hari ke-2</string>
+    <string name="hari_ke_3">Hari ke-3</string>
+    <string name="chek_in_today">Chek-In Hari Ini</string>
     <string-array name="menu_profil">
         <item>Semua Pesanan</item>
         <item>Alamat Pengiriman</item>
@@ -183,6 +198,85 @@
         <item>@drawable/pesan</item>
         <item>@drawable/brand2</item>
     </integer-array>
+    <string name="tentang">
+        Syarat dan Ketentuan ini dibuat dalam bahasa Indonesia dan Inggris. Apabila terdapat perbedaan antara keduanya, maka ketentuan dalam versi bahasa Indonesia adalah ketentuan yang berlaku.
+Syarat dan Ketentuan ini diatur oleh hukum Negara Republik Indonesia, tanpa memperhatikan pilihan atau konflik ketentuan hukum dari yurisdiksi manapun, dan setiap perselisihan, tindakan, klaim atau penyebab tindakan yang timbul dari atau sehubungan dengan Syarat dan Ketentuan ini atau Layanan akan dirujuk ke Badan Arbitrase Nasional Indonesia (“BANI”), sesuai dengan Peraturan BANI sebagaimana berubah dari waktu ke waktu (“Peraturan”) oleh arbiter tunggal yang ditunjuk atas perjanjian bersama oleh Pengguna dan Kopi Kenangna (“Arbiter”).
+Jika Pengguna dan Kopi Kenangan tidak dapat menyetujui arbiter, Arbiter akan ditunjuk oleh ketua BANI sesuai dengan Peraturan. Lokasi dan tempat arbitrase adalah Jakarta, dalam bahasa Indonesia dan biaya Arbiter akan ditanggung bersama oleh Pengguna dan Kopi Kenangan, dengan ketentuan bahwa Arbiter dapat meminta agar biaya tersebut ditanggung sedemikian rupa sebagaimana ditentukan oleh Arbiter bahwa diperlukan agar klausul arbitrase ini dapat ditegakkan berdasarkan hukum yang berlaku.
+Pengguna dengan ini setuju bahwa sehubungan dengan Pasal 60 Undang-Undang No. 30 Tahun 1999 (“UU Arbitrase”), putusan arbitrase bersifat final dan mengikat Pengguna dan Kopi Kenangan dan berdasarkan itu, Pengguna dan Kopi Kenangan tidak memiliki hak untuk mengajukan banding terhadap putusan arbitrase. Para pihak dengan ini juga secara tegas mengecualikan ketentuan Pasal 48.1 dan 73 (b) UU Arbitrase sehingga mandat kepada Arbiter sebagaimana ditetapkan melalui Syarat dan Ketentuan ini tetap berlaku sampai keputusan akhir arbitrase telah ditentukan oleh Arbiter
+    </string>
+    <string name="kebijakan">
+        menjual atau menggunakan Informasi Pribadi dari Pengguna untuk kepentingan komersial selain sebagaimana disebutkan di atas.
+
+Transfer Internasional Informasi Pribadi
+
+Tunduk terhadap undang-undang privasi yang berlaku, Informasi Pribadi Pengguna dapat dialihkan, disimpan, atau diolah di luar negara Pengguna untuk satu atau lebih Tujuan Penggunaan. Pengguna setuju dan memberikan izin ke Kopi Kenangan untuk mentransfer Informasi Pribadi keluar negara Pengguna ke Pihak Ketiga.
+
+Saat Kopi Kenangan mentransfer Informasi Pribadi Pengguna ke luar negara Pengguna, Kopi Kenangan akan tunduk dengan kewajiban hukum dan peraturan terkait dengan Informasi Pribadi Pengguna dan menempatkan perlindungan yang sesuai untuk memastikan tingkat perlindungan yang memadai untuk Informasi Pribadi. Kopi Kenangan juga akan memastikan bahwa penerima di negara terkait wajib melindungi Informasi Pribadi Pengguna dengan standar perlindungan yang sebanding dengan perlindungan berdasarkan undang-undang privasi yang berlaku.
+
+Keamanan Informasi Pribadi
+
+Kerahasiaan dan keamanaan Informasi Pribadi dari Pengguna adalah hal yang terpenting bagi Kopi Kenangan. Kopi Kenangan melindungi informasi Pengguna menggunakan langkah-langkah keamanan teknis, fisik, dan administratif untuk mengurangi risiko kehilangan, penyalahgunaan, akses tidak sah, pengungkapan, atau modifikasi Informasi Pribadi, termasuk:
+
+1.
+Saat Pengguna mengirimkan informasi yang sangat sensitif (seperti nomor kartu kredit) melalui Aplikasi Kopi Kenangan, Kopi Kenangan mengenkripsi transmisi informasi tersebut mengikuti anjuran dari protokol Secure Sockets Layer (SSL).
+
+2.
+Kopi Kenangan meninjau praktik pengumpulan, penyimpanan, dan pemrosesan informasinya, termasuk langkah-langkah keamanan fisik untuk menghindari akses tidak sah ke sistem Kopi Kenangan.
+
+3.
+Kopi Kenangan membatasi akses Infromasi Pribadi ke karyawan Kopi Kenangan, kontraktor, dan agen yang membutuhkan Informasi Pribadi untuk memprosesnya. Siapapun dengan akes ini tunduk kepada kewajiban kerahasiaan dan dapat dikenakan sanksi atau diberhentikan jika mereka gagal untuk memenuhi kewajiban ini.
+
+Meskipun Kopi Kenangan telah menggunakan teknologi dan proses keamanan untuk membantu menjaga Informasi Pribadi Pengguna, tidak ada metode transmisi melalui internet atau metode penyimpanan elektronik yang 100% aman bagi Pengguna atau menjamin bahwa Informasi Pribadi tersebut tidak akan dicegat, diakses, diungkapkan, diubah atau dihancurkan oleh pihak ketiga yang tidak berwenang, karena faktor-faktor di luar kendali Kopi Kenangan; oleh karena itu, Kopi Kenangan tidak dapat menjamin keamanan mutlaknya. Pengguna bertanggung jawab untuk menjaga kerahasiaan detail Akun Pengguna, termasuk kata sandi Pengguna dan harus selalu menjaga dan bertanggung jawab atas keamanan perangkat yang Pengguna gunakan.
+
+Penyimpanan dan Penghapusan Informasi Pribadi
+
+Pengguna memahami dan mengakui hal-hal sebagai berikut:
+
+1.
+Informasi Pribadi dari Pengguna yang dikumpulkan dapat disimpan, ditransfer, atau diolah oleh penyedia layanan Pihak Ketiga. Kopi Kenangan akan menggunakan semua upaya yang wajar untuk memastikan bahwa semua penyedia layanan Pihak Ketiga tersebut memberikan tingkat perlindungan yang sebanding dengan komitmen Kopi Kenangan berdasarkan Kebijakan Privasi ini.
+
+2.
+Kopi Kenangan menyimpan Informasi Pribadi milik Pengguna untuk periode yang diperlukan untuk memenuhi Tujuan Penggunaan, atau tujuan lain yang diuraikan dalam Kebijakan Privasi ini atau yang diizinkan oleh peraturan perundang-undangan yang berlaku kecuali diperlukan periode penyimpanan yang lebih lama atau diizinkan oleh hukum. Setelah Informasi Pribadi Pengguna tidak lagi diperlukan untuk Layanan, Tujuan Penggunaan, atau tujuan lain, atau Kopi Kenangan tidak lagi memiliki tujuan hukum atau bisnis untuk menyimpan Informasi Pribadi, Kopi Kenangan mengambil langkah-langkah untuk menghapus, menghancurkan, menganonimkan atau mencegah akses atau penggunaan Informasi Pribadi tersebut untuk setiap tujuan selain dari kepatuhan terhadap Kebijakan Privasi ini, atau untuk tujuan keselamatan, keamanan, pencegahan dan deteksi penipuan, sesuai dengan persyaratan hukum yang berlaku.
+
+3.
+Pengguna memahami bahwa beberapa Informasi Pribadi dapat disimpan oleh pihak lain termasuk institusi pemerintah dengan cara tertentu. Dalam hal Kopi Kenangan membagikan Informasi Pribadi kepada institusi pemerintah yang berwenang dan/atau institusi lainnya yang dapat ditunjuk oleh pemerintah yang berwenang atau memiliki kerja sama dengan Kopi Kenangan, Pengguna menyetujui dan mengakui bahwa penyimpanan Informasi Pribadi oleh institusi terkait akan mengikuti kebijakan penyimpanan data masing-masing institusi tersebut.
+
+Pengguna dapat menghapus Informasi Pribadi kapanpun dia mau, antara lain, dengan mengunjungi tab “Saya”, klik “Edit Profil” dan kemudian bagian “Hapus Akun Kopi Kenangan” di Aplikasi. Pengguna juga diperlukan untuk mengikuti langkah dan persyaratan untuk menghapus Informasi Pribadi di Aplikasi, yaitu, dengan mengkonfirmasi Syarat dan Ketentuan, Kebijakan Privasi, PIN Pengguna dan verifikasi melalui One Time Password (OTP). Saat Pengguna menghapus Informasi Pribadi dan akun, Kopi Kenangan akan memastikan bahwa Informasi Pribadi Pengguna telah terhapus dengan aman dan menyeluruh dari server Kopi Kenangan atau hanya disimpan dalam bentuk anonim.
+
+Pengguna harus memahami dan mengakui bahwa setelah pengapusan Informasi Pribadi dan akun, Pengguna tidak akan bisa menggunakan Applikasi dan layanan. Penghapusan Informasi Pribadi dan akun oleh Pengguna dapat menyebabkan berakhirnya akun Pengguna atau hubungan kontraktual dengan Kopi Kenangan, dengan semua hak dan kewajiban yang timbul tetap sepenuhnya dilindungi undang-undang.
+
+Mengelola dan Memperbarui Informasi Pribadi
+
+Dengan tunduk pada peraturan perundang-undangan yang berlaku, Pengguna dapat mengakses dan/atau memperbarui Informasi Pribadi yang berada dalam kepemilikan dan penguasaan Kopi Kenangan dengan mengunjungi tab ‘Saya’ dan kemudian bagian ‘Edit Profil’ atau dengan menghubungi customer service dari Kopi Kenangan.
+
+Kopi Kenangan berhak menolak permintaan Pengguna untuk mengakses, atau untuk memperbaiki, sebagian atau semua Informasi Pribadi yang Kopi Kenangan miliki atau kuasai jika diizinkan atau diperlukan berdasarkan perundang-undangan yang berlaku. Hal tersebut termasuk dalam keadaan di mana Informasi Pribadi tersebut dapat berisi referensi kepada orang lain atau di mana permintaan untuk mengakses atau permintaan untuk mengoreksi adalah untuk alasan yang Kopi Kenangan anggap tidak relevan, tidak serius, atau menyulitkan.
+
+Tautan ke Situs atau Platform Pihak Ketiga
+
+Layanan ini mungkin berisi tautan ke situs atau platform lain milik pihak ketiga. Jika Pengguna mengklik tautan pihak ketiga, Pengguna akan diarahkan ke situs atau platform itu. Perhatikan bahwa situs atau platform eksternal ini tidak dioperasikan oleh Kopi Kenangan. Oleh karena itu, Kopi Kenangan sangat menyarankan Pengguna untuk meninjau kebijakan privasi situs atau platform tersebut. Kopi Kenangan tidak memiliki kendali atas dan tidak bertanggung jawab atas konten, kebijakan privasi, atau praktik situs, platform atau layanan pihak ketiga mana pun.
+
+Privasi Anak-anak
+
+Kopi Kenangan tidak bermaksud agar situs web atau Layanan online Aplikasi digunakan oleh siapa pun yang berusia di bawah umur menurut undang-undang dan peraturan yang berlaku, kecuali dalam pengawasan orang tua atau wali. Jika Pengguna adalah orang tua atau wali dan Pengguna mengetahui bahwa anak Pengguna telah memberikan Informasi Pribadi kepada Kopi Kenangan, harap hubungi Kopi Kenangan agar Kopi Kenangan dapat mampu melakukan tindakan yang diperlukan.
+
+Cookies
+
+“Cookies” adalah file dengan sejumlah kecil data yang biasanya digunakan sebagai pengidentifikasi unik anonim. Ini dikirim ke browser Pengguna dari situs web yang Pengguna kunjungi dan disimpan di memori internal perangkat Pengguna.
+
+Pada saat Pengguna menggunakan Aplikasi dan Layanan, informasi tertentu dapat dikumpulkan secara otomatis dengan menggunakan Cookies. Selain itu, Aplikasi dapat menggunakan kode dan perpustakaan Pihak Ketiga yang menggunakan Cookies untuk mengumpulkan informasi dan meningkatkan Layanan. Pengguna dapat menonaktifkan Cookies dengan membersihkan cache dari Aplikasi Pengguna. Jika Pengguna menonaktifkan Cookies Kopi Kenangan, Pengguna mungkin tidak dapat menggunakan beberapa bagian dari Layanan Kopi Kenangan.
+
+Bagaimana cara menghubungi Kopi Kenangan
+
+Jika anda mempunyai pertanyaan terkait Kebijakan Privasi ini atau anda ingin mendapatkan akses ke Informasi Pribadi Anda, mohon hubungi dpo@kopikenangan.com.
+    </string>
+    <string name="hubungi">Hubungi Kami</string>
+    <string name="tentang_kenangan">
+        Kopi Kenangan merupakan salah satu kedai kopi non-waralaba dengan pertumbuhan tercepat di Indonesia. Dimulai dari mimpi para pendiri Kopi Kenangan untuk membawa rasa cinta terhadap kopi Indonesia dan memperkenalkannya ke seluruh dunia.
+
+Di Kopi Kenangan, kami berusaha mewujudkan mimpi menjadi kedai kopi terkemuka di Indonesia, bahkan dunia, dengan mengambil pendekatan “New Retail” di mana tak ada lagi batasan antara interaksi online dan offline. Kami belajar setiap hari untuk memastikan seluruh pelanggan mendapat pengalaman terbaik dengan pelayanan kelas dunia.
+
+Impian kami adalah menjadi kedai kopi terbesar di Indonesia, bahkan dunia dengan mengedepankan produk yang terjangkau namun tetap berkualitas tinggi. Dengan menggabungkan keahlian kami di bidang teknologi serta pelayanan yang berkualitas, kami akan memberikan pelayanan yang cepat dan ramah agar setiap pelanggan Kopi Kenangan dapat menikmati secangkir kebahagiaan di dalam genggaman mereka, setiap harinya.
+    </string>
 
 
 </resources>

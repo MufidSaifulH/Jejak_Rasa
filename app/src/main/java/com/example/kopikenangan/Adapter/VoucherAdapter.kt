@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kopikenangan.R
 import com.example.kopikenangan.dataclass.Promo
@@ -28,5 +29,10 @@ class VoucherAdapter (private val listVoucher : ArrayList<Voucher>) : RecyclerVi
         holder.tvKlaim.text = listVoucher[position].nama
         holder.tvNominal.text = listVoucher[position].nominal
         holder.tvDeskripsi.text = listVoucher[position].klaim
+
+        holder.itemView.setOnClickListener {
+            Toast.makeText(holder.itemView.context, "Voucher Telah" + listVoucher[holder.adapterPosition].nama, Toast.LENGTH_SHORT)
+                .show()
+        }
     }
 }

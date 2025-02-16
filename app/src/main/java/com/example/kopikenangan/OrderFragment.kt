@@ -1,5 +1,6 @@
 package com.example.kopikenangan
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -31,6 +32,11 @@ class OrderFragment : Fragment() {
         rvOutlet.setHasFixedSize(true)
         list.addAll(getListOutlet())
         showRecyclerList()
+
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(requireContext(), MainActivity::class.java)
+            startActivity(intent)
+        }
 
         return view
     }
