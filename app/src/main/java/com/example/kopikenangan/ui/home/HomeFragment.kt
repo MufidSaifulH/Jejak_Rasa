@@ -152,6 +152,20 @@ class HomeFragment : Fragment() {
                 e.printStackTrace()
             }
         }
+        binding.btnBaru.setOnClickListener {
+            val orderFragment = OrderFragment()
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, orderFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+        binding.btnMakanan.setOnClickListener {
+            val orderFragment = OrderFragment()
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, orderFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
     }
 
     private fun getListPromo(): ArrayList<Promo> {

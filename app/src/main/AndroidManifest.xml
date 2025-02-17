@@ -12,21 +12,35 @@
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
-            android:name=".TentangActivity"
+            android:name=".SplashScreen2"
             android:exported="false"
             android:theme="@style/Theme.KopiKenangan"/>
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.KopiKenangan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TentangActivity"
+            android:exported="false"
+            android:theme="@style/Theme.KopiKenangan" />
         <activity
             android:name=".BorongActivity"
             android:exported="false"
-            android:theme="@style/Theme.KopiKenangan"/>
+            android:theme="@style/Theme.KopiKenangan" />
         <activity
             android:name=".KebijakanActivity"
             android:exported="false"
-            android:theme="@style/Theme.KopiKenangan"/>
+            android:theme="@style/Theme.KopiKenangan" />
         <activity
             android:name=".KetentuanActivity"
             android:exported="false"
-            android:theme="@style/Theme.KopiKenangan"/>
+            android:theme="@style/Theme.KopiKenangan" />
         <activity
             android:name=".Bahasa"
             android:exported="false"
@@ -42,13 +56,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.KopiKenangan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.KopiKenangan" />
     </application>
 
 </manifest>

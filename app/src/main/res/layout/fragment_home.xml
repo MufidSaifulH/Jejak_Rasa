@@ -140,6 +140,7 @@
                 android:textStyle="bold"/>
 
             <ImageView
+                android:id="@+id/btn_baru"
                 android:layout_width="15sp"
                 android:layout_height="15sp"
                 android:layout_centerInParent="true"
@@ -170,8 +171,9 @@
                 android:textStyle="bold"/>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/btn_makanan"
+                android:layout_width="15sp"
+                android:layout_height="15sp"
                 android:src="@drawable/rigth_arrow"
                 android:layout_centerInParent="true"
                 android:layout_alignParentRight="true"/>
