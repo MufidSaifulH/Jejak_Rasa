@@ -1,38 +1,42 @@
 package com.example.kopikenangan.Adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kopikenangan.R
-import com.example.kopikenangan.dataclass.Promo
-import com.example.kopikenangan.dataclass.Voucher
+import com.example.kopikenangan.Adapter.ListPromoAdapter.Companion.DIFF_CALLBACK
+import com.example.kopikenangan.databinding.ItemVoucherBinding
+import com.example.kopikenangan.response.Data
+import com.example.kopikenangan.response.DataItem
 
-class VoucherAdapter (private val listVoucher : ArrayList<Voucher>) : RecyclerView.Adapter<VoucherAdapter.ListViewHolder>() {
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvKlaim: TextView = itemView.findViewById(R.id.tv_klaim)
-        val tvNominal: TextView = itemView.findViewById(R.id.tv_nominal)
-        val tvDeskripsi: TextView = itemView.findViewById(R.id.tv_deskrip)
+class VoucherAdapter : ListAdapter<Data, VoucherAdapter.ViewHolder>(DIFF_CALLBACK){
+    class ViewHolder (private val binding: ItemVoucherBinding) : RecyclerView.ViewHolder(binding.root){
+        fun bind(data: Data){
+            binding.tvNominal.text = data.harga
+            binding.tvDeskrip.text = data.klaim
+            binding.tvKlaim.text = data.deskripsi
+        }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.item_voucher, parent, false)
-        return ListViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val binding = ItemVoucherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = listVoucher.size
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val data = getItem(position)
+        holder.bind(data)
+    }
+    companion object {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Data>() {
+            override fun areItemsTheSame(oldItem: Data, newItem: Data): Boolean {
+                return oldItem.id == newItem.id
+            }
 
-    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        holder.tvKlaim.text = listVoucher[position].nama
-        holder.tvNominal.text = listVoucher[position].nominal
-        holder.tvDeskripsi.text = listVoucher[position].klaim
-
-        holder.itemView.setOnClickListener {
-            Toast.makeText(holder.itemView.context, "Voucher Telah" + listVoucher[holder.adapterPosition].nama, Toast.LENGTH_SHORT)
-                .show()
+            override fun areContentsTheSame(oldItem: Data, newItem: Data): Boolean {
+                return oldItem == newItem
+            }
         }
     }
 }

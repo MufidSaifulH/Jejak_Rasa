@@ -56,6 +56,13 @@ dependencies {
     implementation(libs.androidx.viewpager2)
     implementation(libs.dotsindicator)
     implementation(libs.androidx.activity)
+    //retrofit 2
+    implementation(libs.retrofit)
+    implementation(libs.retrofit2.converter.gson)
+    //okhttp 3
+    implementation(libs.logging.interceptor)
+    //glide
+    implementation (libs.glide)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

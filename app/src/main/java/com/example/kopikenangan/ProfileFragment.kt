@@ -1,5 +1,6 @@
 package com.example.kopikenangan
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -35,7 +36,9 @@ class ProfileFragment : Fragment() {
             Toast.makeText(requireContext(), "Berhasil ${binding.txtKoin.text}", Toast.LENGTH_SHORT).show()
         }
 
-
+        binding.masuk.setOnClickListener{
+            startActivity(Intent(requireContext(), EditProfilActivity::class.java))
+        }
         return view
     }
     private fun showRecyclerList() {

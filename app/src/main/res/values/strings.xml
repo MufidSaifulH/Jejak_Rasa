@@ -277,6 +277,17 @@ Di Kopi Kenangan, kami berusaha mewujudkan mimpi menjadi kedai kopi terkemuka di
 
 Impian kami adalah menjadi kedai kopi terbesar di Indonesia, bahkan dunia dengan mengedepankan produk yang terjangkau namun tetap berkualitas tinggi. Dengan menggabungkan keahlian kami di bidang teknologi serta pelayanan yang berkualitas, kami akan memberikan pelayanan yang cepat dan ramah agar setiap pelanggan Kopi Kenangan dapat menikmati secangkir kebahagiaan di dalam genggaman mereka, setiap harinya.
     </string>
+    <string name="nama_profil">Nama</string>
+    <string name="email_profil">Email</string>
+    <string name="jk_profil">Jenis Kelamin</string>
+    <string name="No_Hp_profil">No Handphone</string>
+    <string name="tgl_lahir_profil">Tanggal Lahir</string>
+    <string name="alamat_email_profil">Alamat Email</string>
+    <string name="jenis_kelamin_profil">Jenis Kelamin</string>
+    <string name="kota">Kota</string>
+    <string name="hapus_akun">Hapus Akun Jejak Rasa</string>
+    <string name="logout">Logout</string>
+    <string name="ubah_profil">Ubah Profil</string>
 
 
 </resources>
