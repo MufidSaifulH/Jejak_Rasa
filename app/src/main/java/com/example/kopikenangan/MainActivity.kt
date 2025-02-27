@@ -4,15 +4,10 @@ import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.kopikenangan.databinding.ActivityMainBinding
+import com.example.kopikenangan.order.OrderFragment
 import com.example.kopikenangan.ui.home.HomeFragment
-import com.google.android.material.bottomnavigation.LabelVisibilityMode
 import com.google.android.material.navigation.NavigationBarView
-import com.google.android.material.tabs.TabLayout.LabelVisibility
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,28 +1,27 @@
 package com.example.kopikenangan.ui.home
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.kopikenangan.Adapter.AdapterFood
 import com.example.kopikenangan.Adapter.BannerAdapter
 import com.example.kopikenangan.Adapter.ListPromoAdapter
 import com.example.kopikenangan.Adapter.ProdukAdapter
 import com.example.kopikenangan.R
 import com.example.kopikenangan.Adapter.SliderAdapter
 import com.example.kopikenangan.Adapter.VoucherAdapter
-import com.example.kopikenangan.OrderFragment
+import com.example.kopikenangan.order.OrderFragment
 import com.example.kopikenangan.databinding.FragmentHomeBinding
 import com.example.kopikenangan.dataclass.Food
 import com.example.kopikenangan.dataclass.Produk
@@ -30,15 +29,8 @@ import com.example.kopikenangan.dataclass.Promo
 import com.example.kopikenangan.dataclass.Voucher
 import com.example.kopikenangan.response.Data
 import com.example.kopikenangan.response.DataItem
-import com.example.kopikenangan.response.DrinkResponse
+import com.example.kopikenangan.response.DataItemFood
 import com.example.kopikenangan.response.Item
-import com.example.kopikenangan.response.PromoResponse
-import com.example.kopikenangan.response.VoucherResponse
-import com.example.kopikenangan.retrofit.ApiConfig
-import com.example.kopikenangan.retrofit.ApiConfig2
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import java.lang.Runnable
 
 class HomeFragment : Fragment() {
@@ -138,64 +130,108 @@ class HomeFragment : Fragment() {
 //        showRecyclerProduk()
 
         rvMakanan = binding.rvMakanan
-        rvMakanan.setHasFixedSize(true)
-        listMakanan.addAll(getListMakanan())
-        showRecyclerMakanan()
+//        rvMakanan.setHasFixedSize(true)
+//        listMakanan.addAll(getListMakanan())
+//        showRecyclerMakanan()
 
         val layoutManager = LinearLayoutManager(requireContext())
         binding.rvPromo.layoutManager = layoutManager
         val itemDecoration = androidx.recyclerview.widget.DividerItemDecoration(requireContext(), layoutManager.orientation)
         binding.rvPromo.addItemDecoration(itemDecoration)
 
-        getPromo()
-        getVoucher()
-        getDrink()
+
+        val mainViewModel = ViewModelProvider(
+            this, ViewModelProvider.NewInstanceFactory()).get(HomeViewModel::class.java)
+
+        mainViewModel.listPromo.observe(requireActivity()){promo ->
+            setPromoData(promo)
+        }
+        mainViewModel.listVoucher.observe(requireActivity()){voucher ->
+            setVoucherData(voucher)
+        }
+        mainViewModel.listDrink.observe(requireActivity()) { drink ->
+            setDrinkData(drink)
+        }
+        mainViewModel.listFood.observe(requireActivity()) { food ->
+            setFoodData(food)
+        }
+
+//        getPromo()
+//        getVoucher()
+//        getDrink()
+//        getFood()
+
         return view
     }
 
-    private fun getDrink() {
-        val client = ApiConfig2.getApi().getAllMinuman()
-        client.enqueue(object : Callback<DrinkResponse>{
-            override fun onResponse(call: Call<DrinkResponse>, response: Response<DrinkResponse>) {
-                if (response.isSuccessful){
-                    val responseBody = response.body()
-                    if (responseBody != null)
-                        setDrinnkData(responseBody.data)
-                }else{
-                    Toast.makeText(requireContext(), "onFailure: ${response.message()}", Toast.LENGTH_SHORT)
-                        .show()
-                }
-            }
-
-            override fun onFailure(call: Call<DrinkResponse>, t: Throwable) {
-                Toast.makeText(requireContext(), "onFailure: ${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
+//    private fun getFood(){
+//        val client = ApiConfig2.getApi().getAllMakanan()
+//        client.enqueue(object : Callback<FoodResponse>{
+//            override fun onResponse(call: Call<FoodResponse>, response: Response<FoodResponse>) {
+//                if (response.isSuccessful){
+//                    val responseBody = response.body()
+//                    if (responseBody != null)
+//                        setFoodData(responseBody.data)
+//                }else{
+//                    Toast.makeText(requireContext(), "onFailure: ${response.message()}", Toast.LENGTH_SHORT)
+//                        .show()
+//                }
+//            }
+//            override fun onFailure(call: Call<FoodResponse>, t: Throwable) {
+//                Toast.makeText(requireContext(), "onFailure: ${t.message}", Toast.LENGTH_SHORT).show()
+//            }
+//        })
+//    }
+    private fun setFoodData(data: List<DataItemFood>) {
+        val adapter = AdapterFood()
+        adapter.submitList(data)
+        rvMakanan.layoutManager = GridLayoutManager(requireContext(),2)
+        binding.rvMakanan.adapter = adapter
     }
-    private fun setDrinnkData(data: List<Item>) {
+
+//    private fun getDrink() {
+//        val client = ApiConfig2.getApi().getAllMinuman()
+//        client.enqueue(object : Callback<DrinkResponse>{
+//            override fun onResponse(call: Call<DrinkResponse>, response: Response<DrinkResponse>) {
+//                if (response.isSuccessful){
+//                    val responseBody = response.body()
+//                    if (responseBody != null)
+//                        setDrinkData(responseBody.data)
+//                }else{
+//                    Toast.makeText(requireContext(), "onFailure: ${response.message()}", Toast.LENGTH_SHORT)
+//                        .show()
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<DrinkResponse>, t: Throwable) {
+//                Toast.makeText(requireContext(), "onFailure: ${t.message}", Toast.LENGTH_SHORT).show()
+//            }
+//        })
+//    }
+    private fun setDrinkData(data: List<Item>) {
         val adapter = ProdukAdapter()
         adapter.submitList(data)
         rvProduk.layoutManager = GridLayoutManager(requireContext(),2)
         binding.rvProduk.adapter = adapter
     }
 
-    private fun getVoucher() {
-        val client = ApiConfig.getApiService().getAllVoucher()
-        client.enqueue(object : Callback<VoucherResponse>{
-            override fun onResponse(call: Call<VoucherResponse>, response: Response<VoucherResponse>) {
-                if (response.isSuccessful){
-                    val responseBody = response.body()
-                    if (responseBody != null)
-                        setVoucherData(responseBody.data)
-                }else{
-                    Log.e(TAG, "onFailure: ${response.message()}")
-                }
-            }
-            override fun onFailure(call: Call<VoucherResponse>, t: Throwable) {
-                Toast.makeText(requireContext(), "onFailure: ${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
+//    private fun getVoucher() {
+//        val client = ApiConfig.getApiService().getAllVoucher()
+//        client.enqueue(object : Callback<VoucherResponse>{
+//            override fun onResponse(call: Call<VoucherResponse>, response: Response<VoucherResponse>) {
+//                if (response.isSuccessful){
+//                    val responseBody = response.body()
+//                    if (responseBody != null)
+//                        setVoucherData(responseBody.data)
+//                }else{
+//                    Log.e(TAG, "onFailure: ${response.message()}")
+//                }
+//            }
+//            override fun onFailure(call: Call<VoucherResponse>, t: Throwable) {
+//                Toast.makeText(requireContext(), "onFailure: ${t.message}", Toast.LENGTH_SHORT).show()
+//            }
+//        })
+//    }
     private fun setVoucherData(response: List<Data>) {
         val adapter = VoucherAdapter()
         adapter.submitList(response)
@@ -203,24 +239,24 @@ class HomeFragment : Fragment() {
         binding.voucher.adapter = adapter
     }
 
-    private fun getPromo() {
-        val client = ApiConfig.getApiService().getALlPromo()
-        client.enqueue(object : Callback<PromoResponse>{
-            override fun onResponse(call: Call<PromoResponse>, response: Response<PromoResponse>) {
-                if (response.isSuccessful){
-                    val responseBody = response.body()
-                    if (responseBody != null)
-                        setPromoData(responseBody.data)
-                }else{
-                    Toast.makeText(requireContext(), "onFailure: ${response.message()}", Toast.LENGTH_SHORT)
-                        .show()
-                }
-            }
-            override fun onFailure(call: Call<PromoResponse>, t: Throwable) {
-                Toast.makeText(requireContext(), "onFailure: ${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
+//    private fun getPromo() {
+//        val client = ApiConfig.getApiService().getALlPromo()
+//        client.enqueue(object : Callback<PromoResponse>{
+//            override fun onResponse(call: Call<PromoResponse>, response: Response<PromoResponse>) {
+//                if (response.isSuccessful){
+//                    val responseBody = response.body()
+//                    if (responseBody != null)
+//                        setPromoData(responseBody.data)
+//                }else{
+//                    Toast.makeText(requireContext(), "onFailure: ${response.message()}", Toast.LENGTH_SHORT)
+//                        .show()
+//                }
+//            }
+//            override fun onFailure(call: Call<PromoResponse>, t: Throwable) {
+//                Toast.makeText(requireContext(), "onFailure: ${t.message}", Toast.LENGTH_SHORT).show()
+//            }
+//        })
+//    }
     private fun setPromoData(data: List<DataItem>) {
         val adapter = ListPromoAdapter()
         adapter.submitList(data)
@@ -328,28 +364,28 @@ class HomeFragment : Fragment() {
 //        }
 //        return listProduk
 //    }
-    private fun showRecyclerMakanan() {
-        rvMakanan.layoutManager = GridLayoutManager(requireContext(), 2)
-        val listMakananAdapter = com.example.kopikenangan.Adapter.AdapterFood(listMakanan)
-        rvMakanan.adapter = listMakananAdapter
-
-    }
-    private fun getListMakanan(): ArrayList<Food> {
-        val dataName = resources.getStringArray(R.array.nama_makanan)
-        val dataHarga = resources.getStringArray(R.array.harga_makanan)
-        val dataPhoto = resources.obtainTypedArray(R.array.foto_makanan)
-
-        val listMakanan = ArrayList<Food>()
-        for (i in dataName.indices) {
-            val makanan = Food(
-                dataPhoto.getResourceId(i, -1),
-                dataName[i],
-                dataHarga[i]
-            )
-            listMakanan.add(makanan)
-        }
-        return listMakanan
-    }
+//    private fun showRecyclerMakanan() {
+//        rvMakanan.layoutManager = GridLayoutManager(requireContext(), 2)
+//        val listMakananAdapter = com.example.kopikenangan.Adapter.AdapterFood(listMakanan)
+//        rvMakanan.adapter = listMakananAdapter
+//
+//    }
+//    private fun getListMakanan(): ArrayList<Food> {
+//        val dataName = resources.getStringArray(R.array.nama_makanan)
+//        val dataHarga = resources.getStringArray(R.array.harga_makanan)
+//        val dataPhoto = resources.obtainTypedArray(R.array.foto_makanan)
+//
+//        val listMakanan = ArrayList<Food>()
+//        for (i in dataName.indices) {
+//            val makanan = Food(
+//                dataPhoto.getResourceId(i, -1),
+//                dataName[i],
+//                dataHarga[i]
+//            )
+//            listMakanan.add(makanan)
+//        }
+//        return listMakanan
+//    }
 
 
 

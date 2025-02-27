@@ -28,7 +28,7 @@ class ProdukAdapter : ListAdapter<Item, ProdukAdapter.ListViewHolder>(DIFF_CALLB
                 .load(data.gambar)
                 .into(binding.produk1)
             binding.namaProduk.text = data.nama
-            binding.hargaProduk.text = data.harga.toString()
+            binding.hargaProduk.text = "Rp.${data.harga}"
         }
     }
 

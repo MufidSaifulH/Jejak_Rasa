@@ -1,23 +1,13 @@
 package com.example.kopikenangan.Adapter
 
-import android.annotation.SuppressLint
-import android.app.Activity
-import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.kopikenangan.DetailActivity
-import com.example.kopikenangan.OrderFragment
 import com.example.kopikenangan.R
 import com.example.kopikenangan.databinding.ItemSpecialBinding
-import com.example.kopikenangan.dataclass.Promo
 import com.example.kopikenangan.response.DataItem
 
 class ListPromoAdapter : ListAdapter<DataItem, ListPromoAdapter.ViewHolder>(DIFF_CALLBACK) {
@@ -26,7 +16,7 @@ class ListPromoAdapter : ListAdapter<DataItem, ListPromoAdapter.ViewHolder>(DIFF
             binding.promo1.setImageResource(R.drawable.promo1)
             binding.tvDeskripsi.text = dataItem.nama
             binding.tvHargaCoret.text = dataItem.hargaLama
-            binding.tvHargaBaru.text = dataItem.hargaBaru
+            binding.tvHargaBaru.text = "Rp.${dataItem.hargaBaru}"
         }
     }
 

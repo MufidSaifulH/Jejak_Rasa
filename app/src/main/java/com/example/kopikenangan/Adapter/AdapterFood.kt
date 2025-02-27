@@ -1,42 +1,66 @@
 package com.example.kopikenangan.Adapter
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.kopikenangan.Adapter.ListPromoAdapter.Companion.DIFF_CALLBACK
 import com.example.kopikenangan.DetailFoodAndDrink
 import com.example.kopikenangan.R
+import com.example.kopikenangan.databinding.ItemProdukBinding
 import com.example.kopikenangan.dataclass.Food
+import com.example.kopikenangan.response.DataItemFood
+import com.example.kopikenangan.response.Item
 
-class AdapterFood (private val listFood : ArrayList<Food>) : RecyclerView.Adapter<AdapterFood.ListViewHolder>() {
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgPhoto : ImageView = itemView.findViewById(R.id.produk_1)
-        val tvDescription : TextView = itemView.findViewById(R.id.nama_produk)
-        val tvHarga : TextView = itemView.findViewById(R.id.harga_produk)
+class AdapterFood : ListAdapter<DataItemFood, AdapterFood.ListViewHolder>(DIFF_CALLBACK) {
+    class ListViewHolder (private val binding : ItemProdukBinding) : RecyclerView.ViewHolder(binding.root){
+        @SuppressLint("SetTextI18n")
+        fun bind(data: DataItemFood){
+            Glide.with(itemView.context)
+                .load(data.gambar)
+                .into(binding.produk1)
+            binding.namaProduk.text = data.nama
+            binding.hargaProduk.text = "Rp.${data.harga}"
+        }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.item_produk, parent, false)
-        return ListViewHolder(view)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ListViewHolder {
+        val binding = ItemProdukBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return ListViewHolder(binding)
     }
-
-    override fun getItemCount(): Int = listFood.size
-
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        holder.imgPhoto.setImageResource(listFood[position].photo)
-        holder.tvDescription.text = listFood[position].nama
-        holder.tvHarga.text = listFood[position].harga
+        val data = getItem(position)
+        holder.bind(data)
+//        holder.imgPhoto.setImageResource(listFood[position].photo)
+//        holder.tvDescription.text = listFood[position].nama
+//        holder.tvHarga.text = listFood[position].harga
+//
+//        holder.itemView.setOnClickListener {
+//            val intentDetail = Intent(holder.itemView.context, DetailFoodAndDrink::class.java)
+//            intentDetail.putExtra("EXTRA_PHOTO", listFood[holder.bindingAdapterPosition].photo)
+//            intentDetail.putExtra("EXTRA_NAME", listFood[holder.bindingAdapterPosition].nama)
+//            intentDetail.putExtra("EXTRA_HARGA_B", listFood[holder.bindingAdapterPosition].harga)
+//
+//            holder.itemView.context.startActivity(intentDetail)
+//        }
+    }
+    companion object {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<DataItemFood>() {
+            override fun areItemsTheSame(oldItem: DataItemFood, newItem: DataItemFood): Boolean {
+                return oldItem.id == newItem.id
+            }
 
-        holder.itemView.setOnClickListener {
-            val intentDetail = Intent(holder.itemView.context, DetailFoodAndDrink::class.java)
-            intentDetail.putExtra("EXTRA_PHOTO", listFood[holder.bindingAdapterPosition].photo)
-            intentDetail.putExtra("EXTRA_NAME", listFood[holder.bindingAdapterPosition].nama)
-            intentDetail.putExtra("EXTRA_HARGA_B", listFood[holder.bindingAdapterPosition].harga)
-
-            holder.itemView.context.startActivity(intentDetail)
+            override fun areContentsTheSame(oldItem: DataItemFood, newItem: DataItemFood): Boolean {
+                return oldItem == newItem
+            }
         }
     }
 }

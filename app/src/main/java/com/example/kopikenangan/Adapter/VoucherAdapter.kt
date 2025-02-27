@@ -13,8 +13,8 @@ import com.example.kopikenangan.response.DataItem
 class VoucherAdapter : ListAdapter<Data, VoucherAdapter.ViewHolder>(DIFF_CALLBACK){
     class ViewHolder (private val binding: ItemVoucherBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(data: Data){
-            binding.tvNominal.text = data.harga
             binding.tvDeskrip.text = data.klaim
+            binding.tvNominal.text = data.harga
             binding.tvKlaim.text = data.deskripsi
         }
     }

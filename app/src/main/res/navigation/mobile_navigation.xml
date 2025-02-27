@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_order"
-        android:name="com.example.kopikenangan.OrderFragment"
+        android:name="com.example.kopikenangan.order.OrderFragment"
         android:label="@string/title_order"
         tools:layout="@layout/fragment_order" />
     <fragment
